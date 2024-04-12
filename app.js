@@ -11,8 +11,11 @@ var indexRouter = require("./routes/index");
 var coursesRouter = require("./routes/courses");
 var apiRouter = require("./routes/api");
 const Course = require("./models/Course");
+const cors = require("cors");
 
 var app = express();
+
+app.use(cors());
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
